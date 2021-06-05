@@ -12,14 +12,14 @@ public class TicTacToeGame {
 			
 		boardOfGame();
 		chooseSymbol();
+		PrintBoard();
 		}
 		public static void boardOfGame() {
 // creating board
 			
-			for (int index=1; index<board.length; index++) {
+		for (int index=1; index<board.length; index++) {
 				
-				
-				board[index]=' ';
+			board[index]=' ';
 			
 			System.out.println(board);
 			}
@@ -52,7 +52,28 @@ public class TicTacToeGame {
 				System.out.println("Invalid Input");
 			}
 			
+			//Printing Board or showing board
+			
 		}
+		public static void PrintBoard() {
+			for(int i=1;i<board.length;i++)
+			{
+				board[i]=(char)i;
+				
+				System.out.println((int)board[i]);
+			}
+			 System.out.println("|---|---|---|");
+		     System.out.println("| " + (int)board[1] + " | " + (int)board[2] + " | " + (int)board[3] + " |");
+		     System.out.println("|-----------|");
+		     System.out.println("| " + (int)board[4] + " | "+ (int)board[5] + " | " + (int)board[6] + " |");
+		     System.out.println("|-----------|");
+		     System.out.println("| " + (int)board[7] + " | " +  (int)board[8] + " | " + (int)board[9] + " |");
+		     System.out.println("|---|---|---|");		
+
+		}
+		
+		
+		
 		
 		}
 		
