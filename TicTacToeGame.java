@@ -8,11 +8,16 @@ public class TicTacToeGame {
 		public static char[] board = new char [10];
 		static char playerChoose;
 		static char compChoose;
-		public static void main (String []args) {
+		static int position;
+	    static int userMove;
+		
+ public static void main (String []args) {
 			
 		boardOfGame();
 		chooseSymbol();
 		PrintBoard();
+		getMove();
+		makeMove();
 		}
 		public static void boardOfGame() {
 // creating board
@@ -52,10 +57,12 @@ public class TicTacToeGame {
 				System.out.println("Invalid Input");
 			}
 			
-			//Printing Board or showing board
-			
 		}
+		
+		//Printing Board or showing board on Console
+
 		public static void PrintBoard() {
+			
 			for(int i=1;i<board.length;i++)
 			{
 				board[i]=(char)i;
@@ -71,10 +78,20 @@ public class TicTacToeGame {
 		     System.out.println("|---|---|---|");		
 
 		}
+		/**
+		 * Accepts move of the user
+		 */
+		public static void getMove() {
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter your move ");
+		    userMove = sc.nextInt();
+		    sc.close();
+		}
+		public static void makeMove() {
+			
+		}
 		
-		
-		
-		
+	
 		}
 		
 		
